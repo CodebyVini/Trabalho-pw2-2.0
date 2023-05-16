@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "2471bc7e-3a72-48c9-9af5-53aee883921e",
+		"name": "TRABALHO DE PW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26562849"
+	},
+	"item": [
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/usuario/selecionar",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"usuario",
+								"selecionar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_usuario\": \"Vinicius\",\r\n    \"email_usuario\": \"vofreitas@gmail.com\",\r\n    \"senha_usuario\": \"senhacacete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}/usuario/inserir",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"usuario",
+								"inserir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID_usuario\": 1,\r\n    \"nome_usuario\": \"Gabriel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}/usuario/alterar",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"usuario",
+								"alterar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/categoria/excluir/:id",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"categoria",
+								"excluir",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
